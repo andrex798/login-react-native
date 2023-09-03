@@ -7,7 +7,7 @@ import { AuthContext } from '../context/AuthContext'
 export const ProfileScreen = () => {
 
   const {user, token, logout} =  useContext(AuthContext);
-
+//pantalla de perfil, muestra los datos del usuario logueado
   return (        
         <View style={profileStyles.container}>
 

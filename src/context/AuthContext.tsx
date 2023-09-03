@@ -39,7 +39,7 @@ export const AuthProvider = ({children}: any) => {
         const token = await AsyncStorage.getItem('token');
         //si no hay token se dispara el evento de no autenticado
         if(!token) return dispatch({type: 'notAuthenticated'});
-        //TODO crear peticion que valide si el token es valido o si esta expirado
+        //solicitud al backend para validar si el token existe
         const resp = await authApi.get('/checkToken')
         dispatch({
             type:'signUp',
@@ -52,7 +52,7 @@ export const AuthProvider = ({children}: any) => {
 
     }
     
-
+    //dispara el evento de inicio de sesion
     const signIn = async ({email, password}: LoginData) => {
         try {
             const resp = await authApi.post<LoginResponse>('/login', {email, password})
@@ -75,6 +75,7 @@ export const AuthProvider = ({children}: any) => {
             })
         }
     };
+    //dispara el evento de registro de usuario
     const signUp = async({email, password, name}: RegisterData) => {
         try {
             const resp = await authApi.post<LoginResponse>('/register', {email, password, name})
@@ -97,10 +98,12 @@ export const AuthProvider = ({children}: any) => {
             })
         }
     };
+    //dispara el evento de cierre de sesion
     const logout = async() => {
         await AsyncStorage.removeItem('token');
         dispatch({type: 'logout'})
     };
+    //dispara el evento para limpiar los errores despues de cada peticion
     const removeError = () => {
         dispatch({type: 'removeError'})
     };

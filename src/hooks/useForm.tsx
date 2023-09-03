@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+//hook para menjar formularios del aplicativo
 export const useForm = <T extends Object>( initState: T ) => {
     
     const [state, setState] = useState( initState );

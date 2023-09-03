@@ -7,7 +7,7 @@ import {StackScreenProps} from '@react-navigation/stack'
 interface Props extends StackScreenProps<any, any>{
     
 }
-
+//pantalla inicial del aplicativo
 export const BtnScreen = ({navigation}: Props) => {
   return (
     <>

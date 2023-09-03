@@ -34,7 +34,7 @@ export const LoginScreen = ({navigation}: Props) => {
     
     }, [errorMessage])
     
-
+    //ejecuta el inicio de sesion
     const onLogin = () => {
         console.log({email, password})
         Keyboard.dismiss();

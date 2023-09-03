@@ -11,6 +11,8 @@ const AppState = ({children}: any) => {
     </AuthProvider>
   )
 }
+
+
 const App = () => {
   return (
     <NavigationContainer>

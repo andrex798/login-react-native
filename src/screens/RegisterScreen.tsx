@@ -9,17 +9,17 @@ import { AuthContext } from '../context/AuthContext';
 interface Props extends StackScreenProps<any, any>{
     
 }
-
+//pantalla de registro
 export const RegisterScreen = ({navigation}: Props) => {
     const {signUp,errorMessage, removeError} = useContext(AuthContext);
 
-
+    //hook para el manejo del formulario
     const {email, password, name, onChange,} = useForm({
         email: '',
         password: '',
         name: '',
     });
-
+    //muestra alerta si ocurre algun error
     useEffect(() => {
         if(errorMessage.length === 0) return;
   
@@ -35,7 +35,7 @@ export const RegisterScreen = ({navigation}: Props) => {
           );
       
       }, [errorMessage])
-
+    //ejecuta la accion registrar
     const onRegister = () => {
         console.log({email, password, name})
         Keyboard.dismiss();

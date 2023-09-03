@@ -10,6 +10,7 @@ import { BtnScreen } from '../screens/BtnScreen';
 
 const Stack = createNativeStackNavigator();
 
+//configuracion de la navegacion y las diferentes pantallas utilizadas en el sistema
 export const Navigator = () => {
 
   const {status} = useContext(AuthContext);
