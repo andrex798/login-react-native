@@ -9,15 +9,15 @@
 
 <strong>Pasos a seguir:</strong>
 <p>
-1. ejecutar el comando npm install en la raiz del proyecto para instalar las dependencias 
-2. ejecutar el comando npx react-native run-android
-3. esperar a que el emulador que se tenga configurado inicie la aplicacion
-4. levantar el backend contruido en laravel, seguir las instrucciones en la carpeta del proyecto
+1. ejecutar el comando npm install en la raiz del proyecto para instalar las dependencias </br>
+2. ejecutar el comando npx react-native run-android </br>
+3. esperar a que el emulador que se tenga configurado inicie la aplicacion</br>
+4. levantar el backend contruido en laravel, seguir las instrucciones en la carpeta del proyecto</br>
 5. configurar los datos del endpoint que se encuentra en el archivo src/api/authApi.tsx, solo se debe cambiar la linea 
-const baseURL = 'http://192.168.0.3/prueba/public/api'; cambiando la ip por la de la maquina en donde se encuentre el backend
-6. la aplicacion tiene las siguientes funcionalidades a probar:
-    *registro de usuarios
-    *login de usuarios registrados
-    *muestra de datos del usuarios una vez se inicia sesion
+const baseURL = 'http://192.168.0.3/prueba/public/api'; cambiando la ip por la de la maquina en donde se encuentre el backend</br>
+6. la aplicacion tiene las siguientes funcionalidades a probar:</br>
+    *registro de usuarios</br>
+    *login de usuarios registrados</br>
+    *muestra de datos del usuarios una vez se inicia sesion</br>
     *cerrar sesion
 </p>
